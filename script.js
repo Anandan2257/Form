@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let personalInputs = personalDetailsSection.querySelectorAll('input, select, textarea');
             let questionnaireInputs = questionnaireSection.querySelectorAll('input, select, textarea');
+            // Force phone input to accept only numbers
+            const phoneInput = document.getElementById("phone");
+            if (phoneInput) {
+                phoneInput.addEventListener("input", function () {
+                this.value = this.value.replace(/\D/g, ""); // Remove non-digits
+                });
+            }
 
             // To store the form data
             const formData = {};
@@ -43,7 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (input.type === 'tel') {
                     const phoneRegex = /^\d{10}$/;
                     isValid = phoneRegex.test(value);
-                } else if (input.type === 'url') {
+                } else if (input.type === 'email') {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    isValid = emailRegex.test(value);
+                }else if (input.type === 'url') {
                     try {
                         new URL(value);
                         isValid = true;

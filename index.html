@@ -59,11 +59,19 @@
                     <p id="parentName-error" class="error-message">Please enter your parent's name.</p>
                 </div>
                 <!-- Contact Details -->
+               <!-- Phone -->
+                    <div class="form-grid-item md-half-width">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" maxlength="10" placeholder="Enter 10-digit number" pattern="[0-9]*" inputmode="numeric">
+                        <p id="phone-error" class="error-message">Please enter a valid 10-digit phone number.</p>
+                    </div>
+
                 <div class="form-grid-item md-half-width">
-                    <label for="contact">Contact Details</label>
-                    <input type="tel" id="contact">
-                    <p id="contact-error" class="error-message">Please enter a valid 10-digit phone number.</p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                    <p id="email-error" class="error-message">Please enter a valid email address.</p>
                 </div>
+
                 <!-- ID Proof Type -->
                 <div class="form-grid-item md-half-width">
                     <label for="idProof">ID Proof Type</label>
