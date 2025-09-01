@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anand</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+
+    <!-- Main Container Card -->
+    <div id="form-container">
+        <div class="form-header">
+            <img src="zogo.png" alt="Zoho Logo">
+            <h1>Software Developer </h1>
+            <p>Please fill out the form below to apply for the position.</p>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="progress-container">
+            <div id="step-1" class="progress-step active">1</div>
+            <div class="progress-line"></div>
+            <div id="step-2" class="progress-step">2</div>
+        </div>
+
+        <!-- Personal Details Section -->
+        <div id="personal-details-section" class="form-section">
+            <h2>Personal Details</h2>
+            <div class="form-grid">
+                <!-- Full Name -->
+                <div class="form-grid-item md-half-width">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName">
+                    <p id="fullName-error" class="error-message">Please enter your full name.</p>
+                </div>
+                <!-- Date of Birth -->
+                <div class="form-grid-item md-half-width">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob">
+                    <p id="dob-error" class="error-message">Please enter a valid date of birth.</p>
+                </div>
+                <!-- Gender -->
+                <div class="form-grid-item md-half-width">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        <option value="prefer_not_to_say">Prefer not to say</option>
+                    </select>
+                    <p id="gender-error" class="error-message">Please select your gender.</p>
+                </div>
+                <!-- Father's/Mother's Name -->
+                <div class="form-grid-item md-half-width">
+                    <label for="parentName">Father's / Mother's Name</label>
+                    <input type="text" id="parentName">
+                    <p id="parentName-error" class="error-message">Please enter your parent's name.</p>
+                </div>
+                <!-- Contact Details -->
+                <div class="form-grid-item md-half-width">
+                    <label for="contact">Contact Details</label>
+                    <input type="tel" id="contact">
+                    <p id="contact-error" class="error-message">Please enter a valid 10-digit phone number.</p>
+                </div>
+                <!-- ID Proof Type -->
+                <div class="form-grid-item md-half-width">
+                    <label for="idProof">ID Proof Type</label>
+                    <select id="idProof">
+                        <option value="">Select ID Type</option>
+                        <option value="aadhar">Aadhar Card</option>
+                        <option value="passport">Passport</option>
+                        <option value="driverLicense">Driver's License</option>
+                        <option value="voterId">Voter ID</option>
+                    </select>
+                    <p id="idProof-error" class="error-message">Please select an ID proof type.</p>
+                </div>
+                 <!-- ID Proof Number (hidden by default) -->
+                <div id="idProofNumberContainer" class="form-grid-item md-half-width" style="display: none;">
+                    <label for="idProofNumber" id="idProofNumberLabel">ID Proof Number</label>
+                    <input type="text" id="idProofNumber">
+                    <p id="idProofNumber-error" class="error-message"></p>
+                </div>
+                <!-- Hobbies -->
+                <div class="form-grid-item md-full-width">
+                    <label for="hobbies">Hobbies</label>
+                    <input type="text" id="hobbies" placeholder="e.g., Reading, Hiking, Coding">
+                    <p id="hobbies-error" class="error-message">Please list your hobbies.</p>
+                </div>
+                <!-- Complete Address -->
+                <div class="form-grid-item">
+                <label for="country">Country</label>
+                <select id="country">
+                    <option value="">-- Select Country --</option>
+                    <option value="India">India</option>
+                </select>
+                </div>
+
+                <!-- State -->
+                <div class="form-grid-item">
+                <label for="state">State</label>
+                <select id="state">
+                    <option value="">-- Select State --</option>
+                </select>
+                </div>
+                
+                <!-- District -->
+                <div class="form-grid-item">
+                <label for="district">District</label>
+                <select id="district">
+                    <option value="">-- Select District --</option>
+                </select>
+                </div>
+
+                <!-- Pincode -->
+                <div class="form-grid-item">
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" maxlength="6" placeholder="Enter 6-digit Pincode">
+                </div>
+
+                <!-- Address -->
+                <div class="form-grid-item md-full-width">
+                <label for="address">Full Address</label>
+                <textarea id="address" rows="3" placeholder="Street / Area / Landmark"></textarea>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button id="next-btn" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+
+        <!-- Application Questionnaire Section -->
+        <div id="questionnaire-section" class="form-section hidden absolute-inset-0">
+            <h2>Work Experience</h2>
+            <div id="work-experience-container" class="form-grid">
+                <!-- Work Experience fields will be added here dynamically -->
+            </div>
+            <button id="add-work-experience-btn" class="add-button">Add Work Experience</button>
+            
+            <hr style="margin: 24px 0;">
+
+            <h2>Educational Details</h2>
+            <div id="education-container" class="form-grid">
+                <!-- Educational fields will be added here dynamically -->
+            </div>
+            <button id="add-education-btn" class="add-button">Add Education</button>
+
+            <hr style="margin: 24px 0;">
+
+            <h2>Technical Skills</h2>
+            <div id="skills-container" class="form-grid">
+                <!-- Technical skills fields will be added here dynamically -->
+            </div>
+            <button id="add-skill-btn" class="add-button">Add Technical Skill</button>
+
+            <hr style="margin: 24px 0;">
+
+            <div class="form-grid">
+                 <!-- Motivation for Zoho -->
+                 <div class="form-grid-item md-full-width">
+                    <label for="challenge">Describe a challenge you faced and how you overcame it.</label>
+                    <textarea id="challenge" rows="3"></textarea>
+                    <p id="challenge-error" class="error-message">Please describe your challenge and solution.</p>
+                </div>
+
+                 <!-- Reason for choosing Software Development -->
+                 <div class="form-grid-item md-full-width">
+                     <label for="reason">Reason for Choosing Software Development.</label>
+                     <textarea id="reason" rows="3"></textarea>
+                     <p id="reason-error" class="error-message">Please explain your reason.</p>
+                 </div>
+                 <!-- Links -->
+                 <div class="form-grid-item md-half-width">
+                     <label for="portfolio">Portfolio Link</label>
+                     <input type="url" id="portfolio">
+                     <p id="portfolio-error" class="error-message">Please enter a valid URL.</p>
+                 </div>
+                 <div class="form-grid-item md-half-width">
+                     <label for="linkedin">LinkedIn Profile</label>
+                     <input type="url" id="linkedin">
+                     <p id="linkedin-error" class="error-message">Please enter a valid URL.</p>
+                 </div>
+                  <div class="form-grid-item md-half-width">
+                     <label for="github">GitHub Profile</label>
+                     <input type="url" id="github">
+                     <p id="github-error" class="error-message">Please enter a valid URL.</p>
+                 </div>
+                  <!-- File Uploads -->
+                 <div class="form-grid-item md-half-width">
+                     <label for="resume">Upload Resume</label>
+                     <input type="file" id="resume">
+                     <p id="resume-error" class="error-message">Please upload your resume.</p>
+                 </div>
+                 <div class="form-grid-item md-half-width">
+                     <label for="photo">Upload Photo</label>
+                     <input type="file" id="photo">
+                     <p id="photo-error" class="error-message">Please upload a photo.</p>
+                 </div>
+                 <!-- Future Career Goals -->
+                 <div class="form-grid-item md-full-width">
+                     <label for="careerGoals">Future Career Goals</label>
+                     <textarea id="careerGoals" rows="3"></textarea>
+                     <p id="careerGoals-error" class="error-message">Please describe your career goals.</p>
+                 </div>
+            </div>
+            <div class="btn-container-space-between">
+                <button id="back-btn" class="btn btn-secondary">Back</button>
+                <button id="submit-btn" class="btn btn-primary">Submit Application</button>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div id="success-message" class="success-message">
+            <div class="success-message-content">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h2>Application Submitted!</h2>
+                <p>Thank you for submitting your application. We will review your information and get back to you soon.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
