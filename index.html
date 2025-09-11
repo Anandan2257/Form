@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- Main Container Card -->
+    
     <div id="form-container">
         <div class="form-header">
             <img src="zogo.png" alt="Zoho Logo">
@@ -17,30 +17,29 @@
             <p>Please fill out the form below to apply for the position.</p>
         </div>
 
-        <!-- Progress Indicator -->
         <div class="progress-container">
             <div id="step-1" class="progress-step active">1</div>
             <div class="progress-line"></div>
             <div id="step-2" class="progress-step">2</div>
         </div>
 
-        <!-- Personal Details Section -->
+        
         <div id="personal-details-section" class="form-section">
             <h2>Personal Details</h2>
             <div class="form-grid">
-                <!-- Full Name -->
+               
                 <div class="form-grid-item md-half-width">
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName">
                     <p id="fullName-error" class="error-message">Please enter your full name.</p>
                 </div>
-                <!-- Date of Birth -->
+               
                 <div class="form-grid-item md-half-width">
                     <label for="dob">Date of Birth</label>
                     <input type="date" id="dob">
                     <p id="dob-error" class="error-message">Please enter a valid date of birth.</p>
                 </div>
-                <!-- Gender -->
+               
                 <div class="form-grid-item md-half-width">
                     <label for="gender">Gender</label>
                     <select id="gender">
@@ -52,14 +51,13 @@
                     </select>
                     <p id="gender-error" class="error-message">Please select your gender.</p>
                 </div>
-                <!-- Father's/Mother's Name -->
+               
                 <div class="form-grid-item md-half-width">
                     <label for="parentName">Father's / Mother's Name</label>
                     <input type="text" id="parentName">
                     <p id="parentName-error" class="error-message">Please enter your parent's name.</p>
                 </div>
-                <!-- Contact Details -->
-               <!-- Phone -->
+                
                     <div class="form-grid-item md-half-width">
                         <label for="phone">Phone Number</label>
                         <input type="tel" id="phone" maxlength="10" placeholder="Enter 10-digit number" pattern="[0-9]*" inputmode="numeric">
@@ -72,7 +70,7 @@
                     <p id="email-error" class="error-message">Please enter a valid email address.</p>
                 </div>
 
-                <!-- ID Proof Type -->
+               
                 <div class="form-grid-item md-half-width">
                     <label for="idProof">ID Proof Type</label>
                     <select id="idProof">
@@ -84,19 +82,18 @@
                     </select>
                     <p id="idProof-error" class="error-message">Please select an ID proof type.</p>
                 </div>
-                 <!-- ID Proof Number (hidden by default) -->
+                
                 <div id="idProofNumberContainer" class="form-grid-item md-half-width" style="display: none;">
                     <label for="idProofNumber" id="idProofNumberLabel">ID Proof Number</label>
                     <input type="text" id="idProofNumber">
                     <p id="idProofNumber-error" class="error-message"></p>
                 </div>
-                <!-- Hobbies -->
+               
                 <div class="form-grid-item md-full-width">
                     <label for="hobbies">Hobbies</label>
                     <input type="text" id="hobbies" placeholder="e.g., Reading, Hiking, Coding">
                     <p id="hobbies-error" class="error-message">Please list your hobbies.</p>
                 </div>
-                <!-- Complete Address -->
                 <div class="form-grid-item">
                 <label for="country">Country</label>
                 <select id="country">
@@ -105,7 +102,7 @@
                 </select>
                 </div>
 
-                <!-- State -->
+             
                 <div class="form-grid-item">
                 <label for="state">State</label>
                 <select id="state">
@@ -113,7 +110,7 @@
                 </select>
                 </div>
                 
-                <!-- District -->
+                
                 <div class="form-grid-item">
                 <label for="district">District</label>
                 <select id="district">
@@ -121,13 +118,13 @@
                 </select>
                 </div>
 
-                <!-- Pincode -->
+               
                 <div class="form-grid-item">
                 <label for="pincode">Pincode</label>
                 <input type="text" id="pincode" maxlength="6" placeholder="Enter 6-digit Pincode">
                 </div>
 
-                <!-- Address -->
+               
                 <div class="form-grid-item md-full-width">
                 <label for="address">Full Address</label>
                 <textarea id="address" rows="3" placeholder="Street / Area / Landmark"></textarea>
@@ -138,11 +135,11 @@
             </div>
         </div>
 
-        <!-- Application Questionnaire Section -->
+       
         <div id="questionnaire-section" class="form-section hidden absolute-inset-0">
             <h2>Work Experience</h2>
             <div id="work-experience-container" class="form-grid">
-                <!-- Work Experience fields will be added here dynamically -->
+               
             </div>
             <button id="add-work-experience-btn" class="add-button">Add Work Experience</button>
             
@@ -150,7 +147,7 @@
 
             <h2>Educational Details</h2>
             <div id="education-container" class="form-grid">
-                <!-- Educational fields will be added here dynamically -->
+                
             </div>
             <button id="add-education-btn" class="add-button">Add Education</button>
 
@@ -158,27 +155,27 @@
 
             <h2>Technical Skills</h2>
             <div id="skills-container" class="form-grid">
-                <!-- Technical skills fields will be added here dynamically -->
+               
             </div>
             <button id="add-skill-btn" class="add-button">Add Technical Skill</button>
 
             <hr style="margin: 24px 0;">
 
             <div class="form-grid">
-                 <!-- Motivation for Zoho -->
+                 
                  <div class="form-grid-item md-full-width">
                     <label for="challenge">Describe a challenge you faced and how you overcame it.</label>
                     <textarea id="challenge" rows="3"></textarea>
                     <p id="challenge-error" class="error-message">Please describe your challenge and solution.</p>
                 </div>
 
-                 <!-- Reason for choosing Software Development -->
+                
                  <div class="form-grid-item md-full-width">
                      <label for="reason">Reason for Choosing Software Development.</label>
                      <textarea id="reason" rows="3"></textarea>
                      <p id="reason-error" class="error-message">Please explain your reason.</p>
                  </div>
-                 <!-- Links -->
+                 
                  <div class="form-grid-item md-half-width">
                      <label for="portfolio">Portfolio Link</label>
                      <input type="url" id="portfolio">
@@ -194,7 +191,7 @@
                      <input type="url" id="github">
                      <p id="github-error" class="error-message">Please enter a valid URL.</p>
                  </div>
-                  <!-- File Uploads -->
+                  
                  <div class="form-grid-item md-half-width">
                      <label for="resume">Upload Resume</label>
                      <input type="file" id="resume">
@@ -205,7 +202,7 @@
                      <input type="file" id="photo">
                      <p id="photo-error" class="error-message">Please upload a photo.</p>
                  </div>
-                 <!-- Future Career Goals -->
+                
                  <div class="form-grid-item md-full-width">
                      <label for="careerGoals">Future Career Goals</label>
                      <textarea id="careerGoals" rows="3"></textarea>
@@ -218,7 +215,7 @@
             </div>
         </div>
 
-        <!-- Success Message -->
+     
         <div id="success-message" class="success-message">
             <div class="success-message-content">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
